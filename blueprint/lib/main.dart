@@ -1,3 +1,4 @@
+import 'package:blueprint/main/blueprint.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -47,7 +48,14 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              ElevatedButton(onPressed: () {}, child: const Text("Sign In"))
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Blueprint()),
+                    );
+                  },
+                  child: const Text("Sign In"))
             ],
           ),
         ));
